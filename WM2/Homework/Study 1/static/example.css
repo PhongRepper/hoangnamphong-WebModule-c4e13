@@ -1,0 +1,10 @@
+div h3 {
+  background-color: green;
+  font-family: "arial", sans-serif;
+}
+
+div p {
+  background-color: blue;
+  font-style: italic;
+  font-family: "Verdana", sans-serif;
+}
