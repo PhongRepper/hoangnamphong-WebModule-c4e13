@@ -1,0 +1,139 @@
+.logo {
+  height: 50px;
+  margin: auto;
+  display: block;
+  padding-bottom: 10px;
+}
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-weight: bold;
+}
+.nav li {
+    color: black;
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding:10px 20px 10px 20px;
+}
+
+.title-h3 {
+  font-family: "Arial";
+  /*font-size: 3em;*/
+  font-size: 2.5em;
+  font-weight:lighter;
+  /*padding-left: 20px;*/
+  padding-left: 52px;
+  margin-bottom: 20px
+}
+.title-h2 {
+  font-family: "Times New Roman";
+  font-weight: normal;
+  font-style: oblique;
+  padding-left: 52px
+}
+
+.title-p {
+  font-family: "Arial";
+  font-weight: lighter;
+  padding-left: 52px;
+}
+.content {
+  padding-left: 50px;
+}
+.main-content {
+  width: 66%;
+  float: left;
+  margin-right: 20px;
+}
+.img-content {
+  float: right;
+  margin-left: 20px;
+}
+.img-content img {
+  height: 300px;
+  width: auto;
+}
+.img-title {
+  width: 220px;
+  font-size: 1.1em;
+  font-style: italic;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.img-content small {
+  color: grey;
+}
+.article {
+  margin-left: 170px;
+  margin-right: 20px;
+  font-size: 28px;
+}
+.bold {
+  font-weight: bold;
+}
+.decoration {
+  text-decoration: underline;
+}
+.most-popular {
+
+  margin-top: 300px;
+  margin-left: 50px;
+}
+.right-title {
+  text-align: center;
+  font-family: Arial;
+}
+.red {
+  color: red;
+  font-size: 0.8em
+}
+.Geogia {
+  font-family: "Georgia";
+  font-weight: bold;
+}
+.main-bottom-left {
+  width: 35%;
+  float: left;
+  margin-left: 100px;
+}
+.main-bottom-left a {
+  font-family: Arial;
+  text-decoration: none;
+}
+.main-bottom-right {
+    width: 35%;
+    float: right;
+    margin-right: 150px
+}
+.main-bottom-right a {
+  font-family: Arial;
+  text-decoration: none;
+}
+
+.title-au {
+  font-family: "Arial";
+  font-weight: lighter;
+  display: inline;
+}
+.footer {
+  background-color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+.footer a {
+  display: inline-block;
+  font-family: "Times New Roman";
+  font-weight: normal;
+  text-decoration: none;
+  color: grey;
+  padding: 0 25px;
+}
