@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Top 7 video games</title>
+    <script type="text/javascript" scr="static\js\bootstrap.min.js">
+    </script>
+    <script type="text/javascript" scr="static\js\jquery-3.2.1.min.js">
+    </script>
+    <script type="text/javascript" scr="static\js\popper.js">
+    </script>
+    <link rel="stylesheet" href="static\css\bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to my game list</h1>
+    </div>
+    {% for item in items %}
+      <div class="container">
+        <h4>{{ item.title }}</h4>
+        <img src="{{ item.image }}" alt="">
+        <p>{{ item.description }}</p>
+      </div>
+    {% endfor %}
+
+  </body>
+</html>
