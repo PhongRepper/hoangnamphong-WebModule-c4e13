@@ -1,30 +1,25 @@
 from flask import Flask, render_template, request
 import mlab
 from mongoengine import *
+from flask import Flask, render_template
 app = Flask(__name__)
 
-# 1.connect to data base
 mlab.connect()
 
-# 2.design collection
 class Item(Document):
     title = StringField()
     image = StringField()
     description = StringField()
     price = IntField()
-# # 3.Try insert an item
-# new_item = Item(
-#     title="DT cu ",
-#     image="http://4.bp.blogspot.com/-s5hcGBgKtkc/UQPeBgxJq9I/AAAAAAAAAvw/r8RICpl9GiE/s1600/old+mobile+phone!.jpg",
-#     description="DT nen dat",
-#     price= 3000000
+# new_game= Item(
+#     title= "Counter-Strike: Global Offensive",
+#     image= "http://on-winning.com/wp-content/uploads/2015/11/steamworkshop_webupload_previewfile_271277161_preview.jpg",
+#     description= "Plant bomb-Defuse. Defend-Rescue",
+#     price="160000"
 # )
-# new_item.save()
+# new_game.save()
 
 items = Item.objects()
-# for item in items:
-#     print(item.title)
-#     print(item.price)
 
 @app.route('/')
 def index():
@@ -33,18 +28,21 @@ def index():
 
 @app.route('/add_item', methods=['GET', 'POST'])
 def add_item():
-    if request.method == "GET": #get form
+    if request.method== 'GET':
         return render_template('add_item.html')
-    elif request.method == "POST":
-        # 1. Extract data in form
+    elif request.method== 'POST':
         form = request.form
         title = form['title']
         image = form['image']
         description = form['description']
         price = form['price']
-        # 2. Add into data base
-        new_item= Item(title= title, image=image,description=description,price=price)
-        new_item.save()
-        return "ok anh"
+
+        new_game= Item(title=title, image=image, description=description, price=price)
+        new_game.save()
+        return render_template('sc.html')
+        # return 'ok anh'
+
+
+
 if __name__ == '__main__':
   app.run(debug=True)
