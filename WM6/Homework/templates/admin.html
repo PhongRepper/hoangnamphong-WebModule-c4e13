@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+ADminstration
+{% endblock %}
+
+{% block page_content %}
+  <table class="container my-5"border="1px">
+    <thead>
+      <th class="text-center">Title</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Image</th>
+      <th class="text-center">Price</th>
+      <th></th>
+    </thead>
+    <tbody>
+      {% for item in items %}
+        <tr>
+          <td class="text-center">{{ item.title }}</td>
+          <td class="text-center">{{ item.description }}</td>
+          <td class="text-center"><a href="{{ item.image }}">Link</a> </td>
+          <td class="text-center">{{ item.price }}VND</td>
+          <td>
+            <a href="/edit_item/{{ item.id }}"><i class="fa fa-wrench text-dark" aria-hidden="true"></i></a>
+            <a href="/delete_item/{{ item.id }}"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a>
+           </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+  {% endblock %}

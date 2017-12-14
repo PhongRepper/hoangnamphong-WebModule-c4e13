@@ -1,0 +1,21 @@
+.logo {
+  font-family: 'Acme', sans-serif;
+  font-size: 2em
+}
+
+.footer {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mar {
+  margin-top: 2px;
+  margin-bottom: 2px
+}
+.carousel-item img {
+  object-fit: cover;
+  height: 500px;
+  width: 100%
+}

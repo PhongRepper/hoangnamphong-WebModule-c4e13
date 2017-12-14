@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+ADmin
+{% endblock %}
+
+{% block page_content %}
+  <div class="container my-4">
+    <form class="" method="post">
+      <label></label>
+      <input class="form-control" type="text" name="title" value="{{ item.title }}" placeholder="Tên">
+      <!-- <input class="form-control"type="text" name="" value="{{item.description}} " placeholder="Mô tả"> -->
+      <textarea placeholder="Mô tả" name="description" rows="8" cols="80">{{item.description}}</textarea>
+      <input class="form-control"type="text" name="image" value=" {{ item.image }}" placeholder="Link">
+      <input class="form-control"type="int" name="price" value="{{ item.price }}" placeholder="Giá">
+
+      {% for message in get_flashed_messages() %}
+        <p class="text-success">{{ message }}</p>
+      {% endfor %}
+      <input class="btn btn-primary"type="submit" name="" value="Sửa">
+    </form>
+
+  </div>
+
+{% endblock %}

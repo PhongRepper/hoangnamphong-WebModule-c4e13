@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+ADmin
+{% endblock %}
+
+{% block page_content %}
+    <table  border="1px">
+      <thead>
+        <th >Tên</th>
+        <th>Mô tả</th>
+        <th>Ảnh</th>
+        <th>Giá</th>
+        <th></th>
+      </thead>
+
+
+      <tbody>
+        <!-- tr= table row -->
+        {% for item in items %}
+          <tr>
+            <td>{{ item.title }}</td>
+            <td>{{ item.description }}</td>
+            <td>
+              <a href="{{ item.image }}">Link</a>
+             </td>
+             <td>{{ item.price}} VNĐ</td>
+             <td>
+               <a href="/edit_item/{{ item.id }}"><<i class="fa fa-wrench text-dark" aria-hidden="true"></i></a>
+               <a href="#"><i class="fa fa-eraser text-dark" aria-hidden="true"></i></a>
+              </td>
+          </tr>
+        {% endfor %}
+
+
+
+      </tbody>
+    </table>
+{% endblock %}

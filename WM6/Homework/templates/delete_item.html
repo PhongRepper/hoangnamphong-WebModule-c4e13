@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+Delete item
+{% endblock %}
+
+{% block page_content %}
+  <table class="container my-5"border="1px">
+    <thead>
+      <th class="text-center">Title</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Image</th>
+      <th class="text-center">Price</th>
+      <th></th>
+    </thead>
+    <tbody>
+     <tr>
+       <td class="text-center">{{ item.title }}</td>
+       <td class="text-center">{{ item.description }}</td>
+       <td class="text-center"><a href="{{ item.image }}">Link</a> </td>
+       <td class="text-center">{{ item.price }}VND</td>
+      </tr>
+  </table>
+  <div class="container my-1">
+    <h3 class="">Are you sure deleting this item ?</h3>
+    <form class=""method="post">
+      <button class="btn btn-danger" type="submit" name="button">Sure</button>
+      <button class="btn btn-primary" type="button" name="button"><a class="text-white"href="/admin">Not really</a></button>
+    </form>
+  </div>
+
+
+{% endblock %}
